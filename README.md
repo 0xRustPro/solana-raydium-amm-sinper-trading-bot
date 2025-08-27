@@ -50,20 +50,6 @@ cargo build --release
 cargo run --release
 ```
 
-## 🎯 How It Works
-
-```mermaid
-graph TD
-    A[Monitor Pool] --> B{Price Drop?}
-    B -->|Yes| C[Execute Buy]
-    C --> D[Monitor Position]
-    D --> E{Exit Condition?}
-    E -->|Profit| F[Sell & Exit]
-    E -->|Stop Loss| F
-    E -->|Time Limit| F
-    F --> G[Save Metrics]
-```
-
 ### Trading Strategy
 
 1. **📊 Monitor** - Tracks pool price changes in real-time
